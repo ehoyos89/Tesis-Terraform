@@ -35,6 +35,7 @@ resource "aws_iam_role" "instance_role" {
   })
 }
 
+
 resource "aws_iam_role_policy_attachment" "instance_role_attachment" {
   policy_arn = aws_iam_policy.db_access.arn
   role       = aws_iam_role.instance_role.name
