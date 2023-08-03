@@ -1,4 +1,3 @@
-# Crear un grupo de Auto Scaling
 resource "aws_autoscaling_group" "ASG" {
     name = "DataredASG"
     desired_capacity = 1
@@ -19,7 +18,7 @@ resource "aws_autoscaling_group" "ASG" {
 }
 
 
-#Crear un auto scaling policy
+
 resource "aws_autoscaling_policy" "ASGPolicy" {
     name = "DataredASGPolicy"
     policy_type = "TargetTrackingScaling"
@@ -33,7 +32,7 @@ resource "aws_autoscaling_policy" "ASGPolicy" {
     }
 }
 
-# Crear Target Group
+
 resource "aws_lb_target_group" "TG" {
     name = "DataredTG"
     port = 80

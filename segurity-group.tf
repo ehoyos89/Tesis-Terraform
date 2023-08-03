@@ -1,4 +1,3 @@
-# Crear un grupo de seguridad para el load balancer
 resource "aws_security_group" "elb_sg" {
     name = "elb_sg"
     description = "Grupo de seguridad para el load balancer"
@@ -23,7 +22,7 @@ resource "aws_security_group" "elb_sg" {
     } 
 }
 
-# Crear un grupo de seguridad para las instancias del servicio web
+
 resource "aws_security_group" "web_sg" {
     name = "web_sg"
     description = "Grupo de seguridad para las instancias del servicio web"
@@ -59,7 +58,7 @@ resource "aws_security_group" "web_sg" {
     }
 }
 
-# Crear un grupo de seguridad para las instancias de base de datos
+
 resource "aws_security_group" "database" {
     name = "database"
     description = "enable access to database"

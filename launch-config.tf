@@ -1,4 +1,3 @@
-# Crear una configuración de lanzamiento
 resource "aws_launch_configuration" "DataredLaunchConfig" {
   image_id = "ami-0f9ce67dcf718d332"
   name_prefix = "DataredLaunchConfig-"

@@ -1,4 +1,3 @@
-# Crear una ruta privada para la subred privada 1
 resource "aws_route_table" "privateRT1" {
     count = "1"
     vpc_id = aws_vpc.DataredVPC.id
@@ -8,7 +7,7 @@ resource "aws_route_table" "privateRT1" {
      }     
 }
 
-# Crear una asociación de tabla de enrutamiento para la subred privada 1
+
 resource "aws_route_table_association" "privateRT1_to_natgw1" {
     count = "1"
     subnet_id = aws_subnet.PrivateSubnet1.id

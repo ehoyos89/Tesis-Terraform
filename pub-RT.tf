@@ -1,4 +1,3 @@
-# Paso 5: Crear las tablas de enrutamiento para las subredes públicas
 resource "aws_route_table" "PublicRT" {
     vpc_id = aws_vpc.DataredVPC.id
     route {
@@ -8,7 +7,7 @@ resource "aws_route_table" "PublicRT" {
 }
 
 
-# Paso 6: Asociar las subredes públicas a la tabla de enrutamiento
+
 resource "aws_route_table_association" "Public1RTassociation" {
     subnet_id = aws_subnet.PublicSubnet1.id
     route_table_id = aws_route_table.PublicRT.id  

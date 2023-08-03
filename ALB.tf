@@ -1,4 +1,4 @@
-# Crear un Apliacion Load Balancer
+
 resource "aws_lb" "ALB" {
     name = "DataredALB"
     internal = false
@@ -15,7 +15,7 @@ resource "aws_lb" "ALB" {
   
 }
 
-# Crear Listeners
+
 resource "aws_lb_listener" "HTTP" {
     load_balancer_arn = aws_lb.ALB.arn
     port = 80

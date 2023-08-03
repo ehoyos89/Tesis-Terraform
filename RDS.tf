@@ -1,4 +1,3 @@
-# Crear base de datos
 resource "aws_db_instance" "db_instance" {
     engine = "mysql"
     engine_version = "8.0.31"
