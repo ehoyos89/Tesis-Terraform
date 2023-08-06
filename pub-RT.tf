@@ -6,8 +6,6 @@ resource "aws_route_table" "PublicRT" {
   }
 }
 
-
-
 resource "aws_route_table_association" "Public1RTassociation" {
     subnet_id = aws_subnet.PublicSubnet1.id
     route_table_id = aws_route_table.PublicRT.id  
